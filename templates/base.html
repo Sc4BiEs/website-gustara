@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Gustara - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        agri: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        warm: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                        surface: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2.5px;
+            background: #10b981;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 70%;
+        }
+        .nav-link:hover {
+            color: #059669;
+        }
+        .nav-link.active {
+            color: #059669;
+            font-weight: 600;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-in {
+            animation: slideIn 0.6s ease-out forwards;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-24px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
+        }
+        .agri-gradient {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 40%, #a7f3d0 100%);
+        }
+        .btn-primary {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px -6px rgba(16, 185, 129, 0.4);
+        }
+        .section-subtitle {
+            display: inline-block;
+            padding: 4px 16px;
+            background: #d1fae5;
+            color: #047857;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+        }
+        ::selection {
+            background: #a7f3d0;
+            color: #064e3b;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+        }
+    </style>
+</head>
+<body class="font-sans text-surface-800 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/85 backdrop-blur-xl border-b border-surface-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="/" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 bg-agri-100 rounded-xl flex items-center justify-center group-hover:bg-agri-200 transition-colors duration-300">
+                        <svg class="w-6 h-6 text-agri-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6z"/>
+                            <path d="M10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-xl text-surface-800 group-hover:text-agri-600 transition-colors duration-300">M. Gustara</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="/" class="nav-link px-4 py-2 text-sm font-medium text-surface-500 rounded-lg">Home</a>
+                    <a href="/about" class="nav-link px-4 py-2 text-sm font-medium text-surface-500 rounded-lg">About</a>
+                    <a href="/education" class="nav-link px-4 py-2 text-sm font-medium text-surface-500 rounded-lg">Education</a>
+                    <a href="/experience" class="nav-link px-4 py-2 text-sm font-medium text-surface-500 rounded-lg">Experience</a>
+                    <a href="/skills" class="nav-link px-4 py-2 text-sm font-medium text-surface-500 rounded-lg">Skills</a>
+                    <a href="/contact" class="nav-link px-4 py-2 text-sm font-medium text-surface-500 rounded-lg">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-surface-400 hover:text-agri-600 hover:bg-agri-50 transition-all duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-surface-100 shadow-lg">
+            <div class="px-4 py-3 space-y-1">
+                <a href="/" class="block px-4 py-3 rounded-xl text-sm font-medium text-surface-600 hover:text-agri-600 hover:bg-agri-50 transition-all duration-200">Home</a>
+                <a href="/about" class="block px-4 py-3 rounded-xl text-sm font-medium text-surface-600 hover:text-agri-600 hover:bg-agri-50 transition-all duration-200">About</a>
+                <a href="/education" class="block px-4 py-3 rounded-xl text-sm font-medium text-surface-600 hover:text-agri-600 hover:bg-agri-50 transition-all duration-200">Education</a>
+                <a href="/experience" class="block px-4 py-3 rounded-xl text-sm font-medium text-surface-600 hover:text-agri-600 hover:bg-agri-50 transition-all duration-200">Experience</a>
+                <a href="/skills" class="block px-4 py-3 rounded-xl text-sm font-medium text-surface-600 hover:text-agri-600 hover:bg-agri-50 transition-all duration-200">Skills</a>
+                <a href="/contact" class="block px-4 py-3 rounded-xl text-sm font-medium text-surface-600 hover:text-agri-600 hover:bg-agri-50 transition-all duration-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    <div class="fixed top-24 right-4 z-50 max-w-sm space-y-2">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message bg-white border-l-4 border-agri-500 shadow-xl rounded-2xl p-4 animate-slide-in">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-agri-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-agri-600 text-sm"></i>
+                            </div>
+                            <p class="text-sm text-surface-700 flex-1">{{ message }}</p>
+                            <button onclick="this.closest('.flash-message').remove()" class="ml-3 text-surface-300 hover:text-surface-500 transition-colors">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-900 text-surface-400 relative">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-agri-500 via-warm-400 to-agri-500"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-agri-800/50 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-agri-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6z"/>
+                                <path d="M10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-lg text-white">M. Gustara</span>
+                    </div>
+                    <p class="text-sm text-surface-500 leading-relaxed">Master of Management Science candidate at IPB University. Bridging agriculture, business, and innovation.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" class="hover:text-agri-400 transition-colors duration-200">About Me</a></li>
+                        <li><a href="/education" class="hover:text-agri-400 transition-colors duration-200">Education</a></li>
+                        <li><a href="/experience" class="hover:text-agri-400 transition-colors duration-200">Experience</a></li>
+                        <li><a href="/contact" class="hover:text-agri-400 transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Connect</h4>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/muhammadgustara" target="_blank" class="w-10 h-10 bg-surface-800 hover:bg-agri-600 rounded-xl flex items-center justify-center transition-all duration-200 hover:-translate-y-1">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="mailto:gustaramuhammad@gmail.com" class="w-10 h-10 bg-surface-800 hover:bg-agri-600 rounded-xl flex items-center justify-center transition-all duration-200 hover:-translate-y-1">
+                            <i class="fas fa-envelope text-white"></i>
+                        </a>
+                        <a href="tel:+6281210374785" class="w-10 h-10 bg-surface-800 hover:bg-agri-600 rounded-xl flex items-center justify-center transition-all duration-200 hover:-translate-y-1">
+                            <i class="fas fa-phone text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-surface-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-surface-500">&copy; 2026 Muhammad Gustara. Crafted with <i class="fas fa-leaf text-agri-400"></i> for a sustainable future.</p>
+                <p class="text-xs text-surface-600">
+                    <i class="fas fa-seedling text-agri-500 mr-1"></i> 
+                    Always growing, always learning.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Highlight active nav link
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+
+        // Auto-dismiss flash messages
+        document.querySelectorAll('.flash-message').forEach(el => {
+            setTimeout(() => {
+                el.style.transition = 'opacity 0.5s ease';
+                el.style.opacity = '0';
+                setTimeout(() => el.remove(), 500);
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
