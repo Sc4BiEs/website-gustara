@@ -4,7 +4,7 @@
 <section class="pt-28 md:pt-32 pb-16 md:pb-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->
-        <div class="text-center mb-10 md:mb-16 animate-fade-in">
+        <div class="text-center mb-10 md:mb-16 reveal">
             <span class="section-subtitle mb-3 md:mb-4 inline-block text-xs md:text-sm">
                 <i class="fas fa-user mr-2"></i>{{ t.about_subtitle }}
             </span>
@@ -15,16 +15,16 @@
         <div class="grid lg:grid-cols-5 gap-8 md:gap-10">
             <!-- Left Column - Personal Info -->
             <div class="lg:col-span-2">
-                <div class="bg-white rounded-3xl shadow-sm border border-surface-100 p-6 md:p-8 card-hover animate-slide-in sticky top-28">
+                <div class="bg-white rounded-3xl shadow-sm border border-surface-100 p-6 md:p-8 card-hover reveal-left sticky top-28">
                     <div class="flex items-center justify-center mb-6 md:mb-8">
-                        <div class="w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-agri-100 to-agri-500 rounded-full flex items-center justify-center shadow-md">
-                            <span class="text-3xl md:text-4xl font-extrabold text-white">MG</span>
+                        <div class="w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden shadow-md ring-2 ring-agri-200">
+                            <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Muhammad Gustara" class="w-full h-full object-cover">
                         </div>
                     </div>
                     <h2 class="text-lg md:text-xl font-bold text-surface-800 text-center mb-4 md:mb-6">{{ t.about_personal_title }}</h2>
                     <div class="space-y-3 md:space-y-4">
-                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl">
-                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-all duration-300">
+                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-user text-agri-600 text-xs md:text-sm"></i>
                             </div>
                             <div class="ml-3">
@@ -32,8 +32,8 @@
                                 <p class="text-xs md:text-sm font-semibold text-surface-800">{{ t.about_fullname }}</p>
                             </div>
                         </div>
-                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl">
-                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-all duration-300">
+                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-calendar text-agri-600 text-xs md:text-sm"></i>
                             </div>
                             <div class="ml-3">
@@ -41,8 +41,8 @@
                                 <p class="text-xs md:text-sm font-semibold text-surface-800">{{ t.about_dob }}</p>
                             </div>
                         </div>
-                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl">
-                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-all duration-300">
+                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-map-marker-alt text-agri-600 text-xs md:text-sm"></i>
                             </div>
                             <div class="ml-3">
@@ -50,8 +50,8 @@
                                 <p class="text-xs md:text-sm font-semibold text-surface-800">{{ t.about_pob }}</p>
                             </div>
                         </div>
-                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl">
-                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-all duration-300">
+                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-flag text-agri-600 text-xs md:text-sm"></i>
                             </div>
                             <div class="ml-3">
@@ -59,8 +59,8 @@
                                 <p class="text-xs md:text-sm font-semibold text-surface-800">{{ t.about_nationality }}</p>
                             </div>
                         </div>
-                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl">
-                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-all duration-300">
+                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-city text-agri-600 text-xs md:text-sm"></i>
                             </div>
                             <div class="ml-3">
@@ -68,8 +68,8 @@
                                 <p class="text-xs md:text-sm font-semibold text-surface-800">{{ t.about_address }}</p>
                             </div>
                         </div>
-                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl">
-                            <div class="w-8 h-8 md:w-9 md:h-9 bg-warm-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl group hover:bg-warm-50 transition-all duration-300">
+                            <div class="w-8 h-8 md:w-9 md:h-9 bg-warm-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-heart text-warm-600 text-xs md:text-sm"></i>
                             </div>
                             <div class="ml-3">
@@ -77,8 +77,8 @@
                                 <p class="text-xs md:text-sm font-semibold text-surface-800">{{ t.about_hobby }}</p>
                             </div>
                         </div>
-                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl">
-                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-center p-3 md:p-3.5 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-all duration-300">
+                            <div class="w-8 h-8 md:w-9 md:h-9 bg-agri-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-ring text-agri-600 text-xs md:text-sm"></i>
                             </div>
                             <div class="ml-3">
@@ -94,7 +94,7 @@
             <div class="lg:col-span-3">
                 <div class="space-y-6 md:space-y-8">
                     <!-- Professional Summary -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-surface-100 p-6 md:p-10 card-hover animate-fade-in">
+                    <div class="bg-white rounded-3xl shadow-sm border border-surface-100 p-6 md:p-10 card-hover card-border reveal">
                         <div class="flex items-center gap-3 mb-4 md:mb-6">
                             <div class="w-10 h-10 md:w-12 md:h-12 bg-agri-100 rounded-2xl flex items-center justify-center">
                                 <i class="fas fa-quote-left text-lg md:text-xl text-agri-600"></i>
@@ -102,14 +102,14 @@
                             <h2 class="text-xl md:text-2xl font-bold text-surface-800">{{ t.about_summary_title }}</h2>
                         </div>
                         <div class="space-y-4 md:space-y-5 text-sm md:text-base text-surface-600 leading-relaxed">
-                            <p>{{ t.about_summary_p1 }}</p>
-                            <p>{{ t.about_summary_p2 }}</p>
-                            <p>{{ t.about_summary_p3 }}</p>
+                            <p class="reveal" style="transition-delay: 0.1s;">{{ t.about_summary_p1 }}</p>
+                            <p class="reveal" style="transition-delay: 0.2s;">{{ t.about_summary_p2 }}</p>
+                            <p class="reveal" style="transition-delay: 0.3s;">{{ t.about_summary_p3 }}</p>
                         </div>
                     </div>
 
                     <!-- Quick Facts -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-surface-100 p-6 md:p-10 card-hover animate-fade-in">
+                    <div class="bg-white rounded-3xl shadow-sm border border-surface-100 p-6 md:p-10 card-hover card-border reveal">
                         <div class="flex items-center gap-3 mb-6 md:mb-8">
                             <div class="w-10 h-10 md:w-12 md:h-12 bg-warm-100 rounded-2xl flex items-center justify-center">
                                 <i class="fas fa-bolt text-lg md:text-xl text-warm-600"></i>
@@ -117,39 +117,39 @@
                             <h2 class="text-xl md:text-2xl font-bold text-surface-800">{{ t.about_facts_title }}</h2>
                         </div>
                         <div class="grid sm:grid-cols-2 gap-4 md:gap-5">
-                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl">
-                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-agri-100 to-agri-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl hover:bg-agri-50 transition-all duration-300 group">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-agri-100 to-agri-200 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                     <i class="fas fa-briefcase text-base md:text-lg text-agri-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">6+</p>
+                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">{{ t.about_fact_exp }}</p>
                                     <p class="text-[10px] md:text-xs text-surface-400">{{ t.about_fact_exp }}</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl">
-                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-warm-100 to-warm-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl hover:bg-warm-50 transition-all duration-300 group">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-warm-100 to-warm-200 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                     <i class="fas fa-industry text-base md:text-lg text-warm-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">3</p>
+                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">{{ t.about_fact_industries }}</p>
                                     <p class="text-[10px] md:text-xs text-surface-400">{{ t.about_fact_industries }}</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl">
-                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-agri-100 to-agri-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl hover:bg-agri-50 transition-all duration-300 group">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-agri-100 to-agri-200 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                     <i class="fas fa-graduation-cap text-base md:text-lg text-agri-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">S2</p>
+                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">{{ t.about_fact_degree }}</p>
                                     <p class="text-[10px] md:text-xs text-surface-400">{{ t.about_fact_degree }}</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl">
-                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-warm-100 to-warm-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-surface-50 rounded-2xl hover:bg-warm-50 transition-all duration-300 group">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-warm-100 to-warm-200 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                     <i class="fas fa-language text-base md:text-lg text-warm-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">2</p>
+                                    <p class="text-xl md:text-2xl font-extrabold text-surface-800">{{ t.about_fact_languages }}</p>
                                     <p class="text-[10px] md:text-xs text-surface-400">{{ t.about_fact_languages }}</p>
                                 </div>
                             </div>

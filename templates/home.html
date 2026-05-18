@@ -3,10 +3,23 @@
 
 <!-- Hero Section -->
 <section class="min-h-[100dvh] flex items-center relative overflow-hidden">
-    <!-- Background -->
+    <!-- Background with animated particles -->
     <div class="absolute inset-0">
         <div class="absolute inset-0 agri-gradient opacity-60"></div>
+        <div class="absolute inset-0 bg-grid"></div>
         <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(16,185,129,0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(251,191,36,0.06) 0%, transparent 50%);"></div>
+        
+        <!-- Floating particles -->
+        <div class="particle w-3 h-3 bg-agri-400 left-[10%] top-[20%] animate-float" style="animation-delay: 0s;"></div>
+        <div class="particle w-2 h-2 bg-warm-400 left-[30%] top-[60%] animate-float" style="animation-delay: 1s;"></div>
+        <div class="particle w-4 h-4 bg-agri-300 left-[60%] top-[30%] animate-float" style="animation-delay: 2s;"></div>
+        <div class="particle w-2 h-2 bg-warm-300 left-[80%] top-[70%] animate-float" style="animation-delay: 0.5s;"></div>
+        <div class="particle w-3 h-3 bg-agri-500 left-[50%] top-[80%] animate-float" style="animation-delay: 3s;"></div>
+        <div class="particle w-1.5 h-1.5 bg-warm-500 left-[20%] top-[40%] animate-float" style="animation-delay: 1.5s;"></div>
+        <div class="particle w-2.5 h-2.5 bg-agri-400 left-[70%] top-[15%] animate-float" style="animation-delay: 2.5s;"></div>
+        <div class="particle w-1.5 h-1.5 bg-warm-400 left-[90%] top-[50%] animate-float" style="animation-delay: 0.8s;"></div>
+        
+        <!-- Decorative SVG shapes -->
         <div class="absolute inset-0 opacity-[0.03]">
             <svg class="w-full h-full" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M100 400C100 200 300 100 400 200S300 500 200 500 100 600 100 400Z" fill="#10b981"/>
@@ -18,15 +31,15 @@
     
     <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 md:py-32 mt-12">
         <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div class="animate-fade-in">
+            <div class="reveal">
                 <span class="section-subtitle mb-4 md:mb-6 inline-block text-xs md:text-sm">
                     <i class="fas fa-seedling mr-2"></i>{{ t.hero_subtitle }}
                 </span>
                 <h1 class="hero-text-responsive font-extrabold text-surface-900 leading-[1.1] mb-4 md:mb-6">
                     {{ t.hero_title_1 }}
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-agri-600 to-agri-400">{{ t.hero_title_2 }}</span>
+                    <span class="text-gradient">{{ t.hero_title_2 }}</span>
                 </h1>
-                <p class="text-base sm:text-lg md:text-xl text-surface-500 mb-8 md:mb-10 leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-surface-500 mb-8 md:mb-10 leading-relaxed max-w-lg">
                     {{ t.hero_desc }}
                 </p>
                 <div class="flex flex-wrap gap-3 md:gap-4">
@@ -36,34 +49,34 @@
                         {{ t.hero_btn_about }}
                     </a>
                     <a href="/contact" 
-                       class="px-6 md:px-8 py-3 md:py-3.5 bg-white text-surface-700 rounded-2xl font-semibold border-2 border-surface-200 hover:border-agri-400 hover:text-agri-600 transition-all duration-200 text-sm md:text-base">
+                       class="btn-outline px-6 md:px-8 py-3 md:py-3.5 bg-white text-surface-700 rounded-2xl font-semibold border-2 border-surface-200 hover:border-agri-400 hover:text-agri-600 transition-all duration-200 text-sm md:text-base">
                         <i class="fas fa-paper-plane mr-2"></i>
                         {{ t.hero_btn_contact }}
                     </a>
                 </div>
                 <!-- Quick Stats -->
                 <div class="flex gap-6 sm:gap-10 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-surface-200">
-                    <div class="text-center">
-                        <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-agri-500">6+</p>
+                    <div class="text-center reveal" style="transition-delay: 0.1s;">
+                        <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-agri-500"><span class="counter" data-target="6">0</span>+</p>
                         <p class="text-[10px] sm:text-xs text-surface-400 font-medium mt-1">{{ t.hero_stat_1 }}</p>
                     </div>
-                    <div class="text-center">
-                        <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-agri-500">3</p>
+                    <div class="text-center reveal" style="transition-delay: 0.2s;">
+                        <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-agri-500"><span class="counter" data-target="3">0</span></p>
                         <p class="text-[10px] sm:text-xs text-surface-400 font-medium mt-1">{{ t.hero_stat_2 }}</p>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center reveal" style="transition-delay: 0.3s;">
                         <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-agri-500">S2</p>
                         <p class="text-[10px] sm:text-xs text-surface-400 font-medium mt-1">{{ t.hero_stat_3 }}</p>
                     </div>
                 </div>
             </div>
-            <div class="hidden md:block animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="hidden md:block reveal-right">
                 <div class="relative">
                     <!-- Profile Card -->
-                    <div class="glass-card rounded-3xl p-8 lg:p-10 shadow-2xl">
+                    <div class="glass-card rounded-3xl p-8 lg:p-10 shadow-2xl card-hover">
                         <div class="flex items-center justify-center mb-6 lg:mb-8">
-                            <div class="w-28 h-28 lg:w-36 lg:h-36 bg-gradient-to-br from-agri-200 to-agri-500 rounded-full flex items-center justify-center shadow-lg">
-                                <span class="text-4xl lg:text-6xl font-extrabold text-white drop-shadow-sm">MG</span>
+                            <div class="w-28 h-28 lg:w-36 lg:h-36 rounded-full overflow-hidden shadow-lg ring-4 ring-white">
+                                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Muhammad Gustara" class="w-full h-full object-cover">
                             </div>
                         </div>
                         <div class="text-center mb-6">
@@ -71,23 +84,23 @@
                             <p class="text-sm lg:text-base text-surface-500">{{ t.hero_card_title }}</p>
                         </div>
                         <div class="space-y-3 lg:space-y-4">
-                            <div class="flex items-center p-3 bg-surface-50 rounded-xl">
-                                <i class="fas fa-map-marker-alt text-agri-500 w-5 lg:w-6 text-sm lg:text-base"></i>
+                            <div class="flex items-center p-3 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-colors duration-300">
+                                <i class="fas fa-map-marker-alt text-agri-500 w-5 lg:w-6 text-sm lg:text-base group-hover:scale-110 transition-transform"></i>
                                 <span class="text-xs lg:text-sm text-surface-600 ml-2">{{ t.hero_card_location }}</span>
                             </div>
-                            <div class="flex items-center p-3 bg-surface-50 rounded-xl">
-                                <i class="fas fa-envelope text-agri-500 w-5 lg:w-6 text-sm lg:text-base"></i>
+                            <div class="flex items-center p-3 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-colors duration-300">
+                                <i class="fas fa-envelope text-agri-500 w-5 lg:w-6 text-sm lg:text-base group-hover:scale-110 transition-transform"></i>
                                 <span class="text-xs lg:text-sm text-surface-600 ml-2">gustaramuhammad@gmail.com</span>
                             </div>
-                            <div class="flex items-center p-3 bg-surface-50 rounded-xl">
-                                <i class="fas fa-phone text-agri-500 w-5 lg:w-6 text-sm lg:text-base"></i>
+                            <div class="flex items-center p-3 bg-surface-50 rounded-xl group hover:bg-agri-50 transition-colors duration-300">
+                                <i class="fas fa-phone text-agri-500 w-5 lg:w-6 text-sm lg:text-base group-hover:scale-110 transition-transform"></i>
                                 <span class="text-xs lg:text-sm text-surface-600 ml-2">+62 812 1037 4785</span>
                             </div>
                         </div>
                     </div>
                     <!-- Decorative elements -->
-                    <div class="absolute -top-6 -right-6 w-24 h-24 lg:w-32 lg:h-32 bg-warm-200 rounded-3xl -z-10 rotate-12 opacity-50"></div>
-                    <div class="absolute -bottom-6 -left-6 w-20 h-20 lg:w-24 lg:h-24 bg-agri-100 rounded-full -z-10"></div>
+                    <div class="absolute -top-6 -right-6 w-24 h-24 lg:w-32 lg:h-32 bg-warm-200 rounded-3xl -z-10 rotate-12 opacity-50 animate-float"></div>
+                    <div class="absolute -bottom-6 -left-6 w-20 h-20 lg:w-24 lg:h-24 bg-agri-100 rounded-full -z-10 animate-float-delayed"></div>
                 </div>
             </div>
         </div>
@@ -98,15 +111,15 @@
 <section class="py-16 md:py-24 bg-white relative">
     <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-surface-50 to-white"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10 md:mb-16 animate-fade-in">
+        <div class="text-center mb-10 md:mb-16 reveal">
             <span class="section-subtitle mb-3 md:mb-4 inline-block text-xs md:text-sm">{{ t.highlights_subtitle }}</span>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-surface-900 mb-3 md:mb-4">{{ t.highlights_title }}</h2>
             <p class="text-base md:text-lg text-surface-400 max-w-xl mx-auto">{{ t.highlights_desc }}</p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 reveal-stagger">
             <!-- Card 1: Education -->
-            <div class="group bg-white rounded-3xl p-6 md:p-8 card-hover shadow-sm border border-surface-100" style="animation-delay: 0.1s;">
+            <div class="group bg-white rounded-3xl p-6 md:p-8 card-hover shadow-sm border border-surface-100 card-border">
                 <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-agri-100 to-agri-200 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
                     <i class="fas fa-graduation-cap text-xl md:text-2xl text-agri-600"></i>
                 </div>
@@ -121,7 +134,7 @@
             </div>
 
             <!-- Card 2: Experience -->
-            <div class="group bg-white rounded-3xl p-6 md:p-8 card-hover shadow-sm border border-surface-100" style="animation-delay: 0.2s;">
+            <div class="group bg-white rounded-3xl p-6 md:p-8 card-hover shadow-sm border border-surface-100 card-border">
                 <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-warm-100 to-warm-200 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
                     <i class="fas fa-briefcase text-xl md:text-2xl text-warm-600"></i>
                 </div>
@@ -136,7 +149,7 @@
             </div>
 
             <!-- Card 3: Skills -->
-            <div class="group bg-white rounded-3xl p-6 md:p-8 card-hover shadow-sm border border-surface-100 sm:col-span-2 lg:col-span-1" style="animation-delay: 0.3s;">
+            <div class="group bg-white rounded-3xl p-6 md:p-8 card-hover shadow-sm border border-surface-100 sm:col-span-2 lg:col-span-1 card-border">
                 <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-agri-100 to-warm-100 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
                     <i class="fas fa-cogs text-xl md:text-2xl text-agri-600"></i>
                 </div>
